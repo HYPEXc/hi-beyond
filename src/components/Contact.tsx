@@ -68,7 +68,7 @@ const Contact = () => {
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-background" />
+                    <Mail className="w-5 h-5 text-background" />
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Email</p>
@@ -77,8 +77,8 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-secondary rounded-xl flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-background" />
+                  <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
+                    <Phone className="w-5 h-5 text-background" />
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Phone</p>
@@ -87,8 +87,8 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-accent rounded-xl flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-background" />
+                  <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-background" />
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Location</p>
@@ -126,7 +126,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="glass border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 bg-background/50 transition-all duration-300"
+                    className="glass border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 bg-background/50 transition-all duration-500 hover:border-primary/40"
                     placeholder="Your full name"
                     required
                   />
@@ -139,7 +139,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="glass border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 bg-background/50 transition-all duration-300"
+                    className="glass border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 bg-background/50 transition-all duration-500 hover:border-primary/40"
                     placeholder="your.email@domain.com"
                     required
                   />
@@ -152,7 +152,7 @@ const Contact = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="glass border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 bg-background/50 transition-all duration-300"
+                  className="glass border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 bg-background/50 transition-all duration-500 hover:border-primary/40"
                   placeholder="Project inquiry, consultation, etc."
                   required
                 />
@@ -164,7 +164,7 @@ const Contact = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="glass border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 bg-background/50 min-h-[120px] resize-none transition-all duration-300"
+                  className="glass border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 bg-background/50 min-h-[120px] resize-none transition-all duration-500 hover:border-primary/40"
                   placeholder="Tell us about your project, goals, and how we can help..."
                   required
                 />
