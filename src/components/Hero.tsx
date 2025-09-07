@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Sparkles, Brain, Cpu, Zap, Network, Bot, Atom } from "lucide-react";
-import heroImage from "@/assets/hero-ai-robot.jpg";
+import heroImage from "@/assets/hero-ai-tech.jpg";
 import { useTypingEffect } from "@/hooks/useTypingEffect";
 import { useCounterAnimation } from "@/hooks/useCounterAnimation";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
