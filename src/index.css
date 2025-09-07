@@ -2,41 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Google Gemini Inspired AI Design System */
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Deep space background inspired by Gemini */
+    --background: 240 15% 7%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Glassmorphic cards */
+    --card: 240 15% 12%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 15% 12%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Electric teal primary - Gemini inspired */
+    --primary: 180 100% 55%;
+    --primary-foreground: 240 15% 7%;
+    --primary-glow: 180 100% 75%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Soft purple secondary - Gemini aesthetic */
+    --secondary: 270 80% 70%;
+    --secondary-foreground: 240 15% 7%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted elements with slight purple tint */
+    --muted: 240 15% 18%;
+    --muted-foreground: 240 5% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Deep blue accent - Gemini's signature */
+    --accent: 250 90% 65%;
+    --accent-foreground: 0 0% 98%;
+    --accent-glow: 250 90% 80%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Neural network orange for highlights */
+    --neural: 35 100% 65%;
+    --neural-foreground: 240 15% 7%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Destructive remains tech red */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --radius: 0.5rem;
+    /* Sophisticated glass borders */
+    --border: 240 15% 25%;
+    --input: 240 15% 15%;
+    --ring: 180 100% 55%;
+
+    --radius: 1.25rem;
+
+    /* Gemini-inspired gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(180 100% 55%), hsl(270 80% 70%), hsl(250 90% 65%));
+    --gradient-secondary: linear-gradient(45deg, hsl(270 80% 70%), hsl(250 90% 65%));
+    --gradient-neural: linear-gradient(135deg, hsl(35 100% 65%), hsl(180 100% 55%));
+    --gradient-glow: linear-gradient(180deg, hsl(180 100% 55% / 0.15), hsl(270 80% 70% / 0.08));
+    --gradient-glass: linear-gradient(135deg, hsl(240 15% 18% / 0.6), hsl(270 80% 70% / 0.1));
+    --gradient-mesh: conic-gradient(from 0deg at 50% 50%, hsl(180 100% 55% / 0.3), hsl(270 80% 70% / 0.3), hsl(250 90% 65% / 0.3), hsl(35 100% 65% / 0.3));
+
+    /* Advanced glass effects */
+    --glass-bg: hsl(240 15% 12% / 0.5);
+    --glass-border: hsl(180 100% 55% / 0.3);
+    --glass-highlight: hsl(0 0% 100% / 0.08);
+
+    /* Multi-layer glow effects */
+    --glow-primary: 0 0 40px hsl(180 100% 55% / 0.4), 0 0 80px hsl(180 100% 55% / 0.2);
+    --glow-secondary: 0 0 30px hsl(270 80% 70% / 0.4), 0 0 60px hsl(270 80% 70% / 0.2);
+    --glow-accent: 0 0 25px hsl(250 90% 65% / 0.4);
+    --glow-neural: 0 0 35px hsl(35 100% 65% / 0.3);
+
+    /* Animation timings */
+    --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +143,330 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: 
+      /* Neural network pattern */
+      radial-gradient(circle at 20% 80%, hsl(180 100% 55% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(270 80% 70% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, hsl(250 90% 65% / 0.08) 0%, transparent 50%),
+      /* Base gradient */
+      linear-gradient(135deg, 
+        hsl(240 15% 7%) 0%,
+        hsl(240 20% 9%) 25%,
+        hsl(245 25% 11%) 50%,
+        hsl(240 20% 9%) 75%,
+        hsl(240 15% 7%) 100%
+      );
+    position: relative;
+    min-height: 100vh;
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    overflow-x: hidden;
   }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      /* Animated particles */
+      radial-gradient(1px 1px at 10% 20%, hsl(180 100% 55% / 0.4), transparent),
+      radial-gradient(1px 1px at 90% 80%, hsl(270 80% 70% / 0.3), transparent),
+      radial-gradient(1px 1px at 30% 70%, hsl(250 90% 65% / 0.3), transparent),
+      radial-gradient(1px 1px at 70% 30%, hsl(35 100% 65% / 0.2), transparent);
+    background-size: 200px 200px, 300px 300px, 250px 250px, 180px 180px;
+    animation: float-particles 20s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(180 100% 55%), hsl(270 80% 70%));
+    border-radius: 6px;
+    border: 1px solid hsl(240 15% 25%);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, hsl(180 100% 65%), hsl(270 80% 80%));
+    box-shadow: 0 0 10px hsl(180 100% 55% / 0.5);
+  }
+}
+
+/* Gemini-inspired Glassmorphism utilities */
+@layer utilities {
+  .glass {
+    background: linear-gradient(135deg, 
+      hsl(240 15% 18% / 0.6),
+      hsl(180 100% 55% / 0.08),
+      hsl(270 80% 70% / 0.06),
+      hsl(240 15% 12% / 0.4)
+    );
+    backdrop-filter: blur(28px) saturate(180%);
+    border: 1px solid hsl(180 100% 55% / 0.25);
+    box-shadow: 
+      0 12px 40px 0 hsl(240 15% 7% / 0.6),
+      0 0 0 1px hsl(0 0% 100% / 0.05),
+      inset 0 1px 0 hsl(0 0% 100% / 0.1),
+      inset 0 -1px 0 hsl(180 100% 55% / 0.1);
+  }
+
+  .glass-card {
+    @apply glass rounded-[2rem] p-8;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent, 
+      hsl(180 100% 55% / 0.15), 
+      hsl(270 80% 70% / 0.1),
+      transparent
+    );
+    transition: left 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-card:hover::before {
+    left: 100%;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 
+      0 30px 60px 0 hsl(240 15% 7% / 0.8),
+      0 0 80px hsl(180 100% 55% / 0.4),
+      0 0 40px hsl(270 80% 70% / 0.3),
+      inset 0 1px 0 hsl(0 0% 100% / 0.15);
+    border-color: hsl(180 100% 55% / 0.4);
+  }
+
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-secondary {
+    box-shadow: var(--glow-secondary);
+  }
+
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+
+  .glow-neural {
+    box-shadow: var(--glow-neural);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+
+  .gradient-neural {
+    background: var(--gradient-neural);
+  }
+
+  .gradient-glow {
+    background: var(--gradient-glow);
+  }
+
+  .gradient-mesh {
+    background: var(--gradient-mesh);
+  }
+
+  .text-glow {
+    text-shadow: 
+      0 0 30px hsl(var(--primary) / 0.6),
+      0 0 60px hsl(var(--primary) / 0.3);
+  }
+
+  .text-glow-secondary {
+    text-shadow: 
+      0 0 20px hsl(var(--secondary) / 0.6),
+      0 0 40px hsl(var(--secondary) / 0.3);
+  }
+
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite alternate;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-typing {
+    overflow: hidden;
+    border-right: 2px solid hsl(var(--primary));
+    white-space: nowrap;
+    animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+  }
+
+  .animate-neural-pulse {
+    animation: neural-pulse 4s ease-in-out infinite;
+  }
+
+  .animate-rotate-slow {
+    animation: rotate-slow 20s linear infinite;
+  }
+
+  .animate-orbit {
+    animation: orbit 15s linear infinite;
+  }
+
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gemini-inspired animations */
+@keyframes float-particles {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) rotate(0deg); 
+  }
+  33% { 
+    transform: translateY(-30px) translateX(10px) rotate(1deg); 
+  }
+  66% { 
+    transform: translateY(-15px) translateX(-5px) rotate(-1deg); 
+  }
+}
+
+@keyframes pulse-glow {
+  0% { 
+    box-shadow: 
+      0 0 30px hsl(180 100% 55% / 0.4),
+      0 0 60px hsl(270 80% 70% / 0.2);
+  }
+  100% { 
+    box-shadow: 
+      0 0 60px hsl(180 100% 55% / 0.6),
+      0 0 120px hsl(270 80% 70% / 0.4);
+  }
+}
+
+@keyframes neural-pulse {
+  0%, 100% {
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: hue-rotate(45deg);
+  }
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
