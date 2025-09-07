@@ -126,7 +126,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="glass border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 bg-background/50 transition-all duration-500 hover:border-primary/40"
+                    className="glass border-primary/20 focus:border-primary bg-background/50 transition-all duration-500 hover:border-primary/40 focus:outline-none"
                     placeholder="Your full name"
                     required
                   />
@@ -139,7 +139,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="glass border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 bg-background/50 transition-all duration-500 hover:border-primary/40"
+                    className="glass border-primary/20 focus:border-primary bg-background/50 transition-all duration-500 hover:border-primary/40 focus:outline-none"
                     placeholder="your.email@domain.com"
                     required
                   />
@@ -152,7 +152,7 @@ const Contact = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="glass border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 bg-background/50 transition-all duration-500 hover:border-primary/40"
+                  className="glass border-primary/20 focus:border-primary bg-background/50 transition-all duration-500 hover:border-primary/40 focus:outline-none"
                   placeholder="Project inquiry, consultation, etc."
                   required
                 />
@@ -164,7 +164,7 @@ const Contact = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="glass border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 bg-background/50 min-h-[120px] resize-none transition-all duration-500 hover:border-primary/40"
+                  className="glass border-primary/20 focus:border-primary bg-background/50 min-h-[120px] resize-none transition-all duration-500 hover:border-primary/40 focus:outline-none"
                   placeholder="Tell us about your project, goals, and how we can help..."
                   required
                 />
